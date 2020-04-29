@@ -1,16 +1,17 @@
 
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
-import ArtworkList from './components/ArtworkList';
-import ArtworkCard from "./components/ArtworkCard";
-
 import Axios from 'axios';
 import {
   BrowserRouter as Router,
+  Link,
   Switch,
   Route,
 } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import ArtworkList from './components/ArtworkList';
+import ArtworkCard from './components/ArtworkCard';
+
 
 function App() {
   const [departments, setDepartments] = useState([]);
@@ -23,19 +24,20 @@ function App() {
       });
   }, []);
 
-  
-
-  
 
   return (
     <div className="App">
       <div>
         <Router>
           <div>
-            <NavBar departments={departments} />
             <Switch>
-              <Route exact path="/" />
-              <Route path="/departments/:id" component={ArtworkList} />
+              <Route exact path="/">
+                <NavBar departments={departments} />
+              </Route>
+              <Route path="/departments/:id">
+                <Link to="/">Home</Link>
+                <ArtworkList />
+              </Route>
             </Switch>
           </div>
         </Router>
