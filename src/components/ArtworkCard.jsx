@@ -21,7 +21,7 @@ function ArtworkCard({ objectID }) {
   return infos != null && (
     <div className="card-container">
       <div className="card-img-container">
-        <img src={infos.primaryImage} alt={infos.title} />
+        <img src={infos.primaryImageSmall} alt={infos.title} />
       </div>
       <div className="card-desc-container">
         <div className="card-title">{infos.title}</div>
