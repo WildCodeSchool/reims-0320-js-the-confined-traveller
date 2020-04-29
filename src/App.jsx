@@ -27,16 +27,7 @@ function App() {
       });
   }, []);
 
-  useEffect(() => {
-    if (wantedDepartment != null) {
-      Axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${wantedDepartment}&q=cat`)
-        .then((response) => response.data)
-        .then((data) => {
-          //setObjectIDs(data.objectIDs ?? []);
-          setObjectIDs(data.objectIDs != null ? data.objectIDs : []);
-        });
-    }
-  }, [wantedDepartment]);
+  
 
   useEffect(() => {
     Axios.get(
@@ -62,8 +53,6 @@ function App() {
           </div>
         </Router>
       </div>
-      {departments.map((department) => (<button type="button" onClick={() => setWantedDepartment(department.departmentId)}>{department.displayName}</button>))}
-      {objectIDs.map((objectID) => (<p>{objectID}</p>))}
       <p>
         <ArtworkCard infosCards={infosCards} />
       </p>
