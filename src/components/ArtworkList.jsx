@@ -12,7 +12,7 @@ const ArtworkList = () => {
     Axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${id}&q=cat`)
       .then((response) => response.data)
       .then((data) => {
-        setObjectIDs(data.objectIDs != null ? data.objectIDs.slice(0, 10) : []);
+        setObjectIDs(data.objectIDs != null ? data.objectIDs.slice(0, 9) : []);
       });
   }, [id]);
 
