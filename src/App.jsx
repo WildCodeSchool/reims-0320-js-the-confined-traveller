@@ -14,10 +14,6 @@ import {
 
 function App() {
   const [departments, setDepartments] = useState([]);
-  const [objectIDs, setObjectIDs] = useState([]);
-  const [wantedDepartment, setWantedDepartment] = useState(null);
-
-  const [infosCards, setInfosCards] = useState([]);
 
   useEffect(() => {
     Axios.get('https://collectionapi.metmuseum.org/public/collection/v1/departments')
@@ -29,16 +25,7 @@ function App() {
 
   
 
-  useEffect(() => {
-    Axios.get(
-      "https://collectionapi.metmuseum.org/public/collection/v1/objects/310541"
-    )
-      .then(response => response.data)
-
-      .then(data => {
-        setInfosCards(data);
-      });
-  }, []);
+  
 
   return (
     <div className="App">
@@ -54,7 +41,7 @@ function App() {
         </Router>
       </div>
       <p>
-        <ArtworkCard infosCards={infosCards} />
+        <ArtworkCard />
       </p>
 
     </div>

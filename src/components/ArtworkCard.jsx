@@ -1,38 +1,69 @@
-import React from "react";
-import "./ArtworkCard.css";
+import React, { useEffect, useState } from 'react';
+import './ArtworkCard.css';
+import Axios from 'axios';
 
-function ArtworkCard({ infosCards }) {
-  return (
+
+function ArtworkCard({ objectID }) {
+  const [infos, setInfos] = useState(null);
+
+  useEffect(() => {
+    Axios.get(
+      `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`,
+    )
+      .then((response) => response.data)
+
+      .then((data) => {
+        setInfos(data);
+      });
+  }, [objectID]);
+
+
+  return infos != null && (
     <div className="card-container">
       <div className="card-img-container">
-        <img src={infosCards.primaryImage} alt={infosCards.title} />
+        <img src={infos.primaryImage} alt={infos.title} />
       </div>
       <div className="card-desc-container">
-        <div className="card-title">{infosCards.title}</div>
+        <div className="card-title">{infos.title}</div>
         <div className="card-object-date">
-          Date : <span>{infosCards.objectDate}</span>
+          Date :
+          {' '}
+          <span>{infos.objectDate}</span>
         </div>
         <div className="card-begin-date">
-          Begin date : <span>{infosCards.objectBeginDate}</span>
+          Begin date :
+          {' '}
+          <span>{infos.objectBeginDate}</span>
         </div>
         <div className="card-end-date">
-          End date : <span>{infosCards.objectEndDate}</span>
+          End date :
+          {' '}
+          <span>{infos.objectEndDate}</span>
         </div>
         <div className="card-culture">
-          Culture : <span>{infosCards.culture}</span>
+          Culture :
+          {' '}
+          <span>{infos.culture}</span>
         </div>
         <div className="card-country">
-          Country : <span>{infosCards.country}</span>
+          Country :
+          {' '}
+          <span>{infos.country}</span>
         </div>
         <div className="card-region">
-          Region : <span>{infosCards.region}</span>
+          Region :
+          {' '}
+          <span>{infos.region}</span>
         </div>
         <div className="card-accession-year">
-          Year of accession : <span>{infosCards.accessionYear}</span>
+          Year of accession :
+          {' '}
+          <span>{infos.accessionYear}</span>
         </div>
       </div>
     </div>
   );
 }
+
 
 export default ArtworkCard;
