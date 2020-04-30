@@ -42,6 +42,7 @@ function App() {
       </Router>
       <footer>
         <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">Wild Code School</a>
+        <a href="https://www.metmuseum.org/" target="_blank">MET Museum</a>
         <p>Hackathon project</p>
       </footer>
     </div>
