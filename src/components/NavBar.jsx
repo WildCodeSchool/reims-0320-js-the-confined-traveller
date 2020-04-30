@@ -5,15 +5,13 @@ import {
 
 const NavBar = ({ departments }) => (
   <div>
-    <nav>
-      <ul className="navbar">
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        {departments.map((department, index) => (
-          <li
-            className={`_${index}`}
-          >
+    <header>
+      <NavLink to="/">The Confined Traveller</NavLink>
+    </header>
+    <nav className="navbar">
+      <ul>
+        {departments.map((department) => (
+          <li>
             <NavLink
               to={`/departments/${department.departmentId}`}
             >
