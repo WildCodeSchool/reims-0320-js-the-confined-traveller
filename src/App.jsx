@@ -26,7 +26,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="app">
       <div>
         <Router>
           <div>
@@ -35,7 +35,9 @@ function App() {
                 <NavBar departments={departments} />
               </Route>
               <Route path="/departments/:id">
-                <Link to="/">Home</Link>
+                <header>
+                  <Link to="/">The Confined Traveller</Link>
+                </header>
                 <ArtworkList />
               </Route>
             </Switch>
@@ -45,7 +47,10 @@ function App() {
       <p>
         <ArtworkCard />
       </p>
-
+      <footer>
+        <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">Wild Code School</a>
+        <p>Hackathon project</p>
+      </footer>
     </div>
   );
 }

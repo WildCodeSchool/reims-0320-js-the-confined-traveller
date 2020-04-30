@@ -2,19 +2,16 @@ import React from 'react';
 import {
   NavLink,
 } from 'react-router-dom';
-import "./NavBar.css"
 
 const NavBar = ({ departments }) => (
-  <div className="navbar">
-    <nav>
-      <ul className="grid">
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        {departments.map((department, index) => (
-          <li
-            className={`_${index}`}
-          >
+  <div>
+    <header>
+      <NavLink to="/">The Confined Traveller</NavLink>
+    </header>
+    <nav className="navbar">
+      <ul>
+        {departments.map((department) => (
+          <li>
             <NavLink
               to={`/departments/${department.departmentId}`}
             >
