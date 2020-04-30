@@ -26,7 +26,8 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="app">
+      <header>The Confined Traveller</header>
       <div>
         <Router>
           <div>
@@ -45,7 +46,10 @@ function App() {
       <p>
         <ArtworkCard />
       </p>
-
+      <footer>
+        <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">Wild Code School</a>
+        <p>Hackathon project</p>
+      </footer>
     </div>
   );
 }
