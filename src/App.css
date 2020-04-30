@@ -13,6 +13,12 @@ body {
   background-color: #C8CACA;
 }
 
+.text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #24345C;
+}
+
 header {
   background-color: #24345C;
   color: #F8F7F5;
