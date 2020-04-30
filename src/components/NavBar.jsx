@@ -4,9 +4,9 @@ import {
 } from 'react-router-dom';
 
 const NavBar = ({ departments }) => (
-  <div className="navbar">
+  <div>
     <nav>
-      <ul className="grid">
+      <ul className="navbar">
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
