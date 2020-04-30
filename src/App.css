@@ -12,24 +12,15 @@ header {
 }
 
 .navbar {
-  background-image: url('https://www.metmuseum.org/-/media/images/visit/met-fifth-avenue/the-met_fifth-avenue-map_020516_floor1.jpg?as=1&la=en&mh=966&mw=1520&hash=A0A0CA8408493849400BA57000593C31'), url('https://www.metmuseum.org/-/media/images/visit/met-fifth-avenue/the-met_fifth-avenue-map_020516_floor1.jpg?as=1&la=en&mh=966&mw=1520&hash=A0A0CA8408493849400BA57000593C31');
-  background-repeat: no-repeat, no-repeat;
-  background-position: center top, center bottom;
-  background-size: contain;
-  height: 100vh;
+  columns: 4rem 4;
+  margin-right: 2rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  
-}
-
-li{
+li {
   padding: 1rem;
   list-style-type: none;
   border: solid 1px black;
-  background-color: #C8CACA;
+  background-color: #F8F7F5;
   font-size: 0.5em;
 }
 
