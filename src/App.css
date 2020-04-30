@@ -1,8 +1,24 @@
-.app {
-  display: flex;
-  align-items: center;
-  
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+header {
+  background-color: #24345C;
+  height: auto;
+  color: #F8F7F5;
+  font-family: 'Bangers', cursive;
+  font-weight: bold;
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
 }
+
+.navbar {
+  background-image: url('https://www.metmuseum.org/-/media/images/visit/met-fifth-avenue/the-met_fifth-avenue-map_020516_floor1.jpg?as=1&la=en&mh=966&mw=1520&hash=A0A0CA8408493849400BA57000593C31'), url('https://www.metmuseum.org/-/media/images/visit/met-fifth-avenue/the-met_fifth-avenue-map_020516_floor1.jpg?as=1&la=en&mh=966&mw=1520&hash=A0A0CA8408493849400BA57000593C31');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center bottom;
+  background-size: contain;
+  height: 100vh;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -14,10 +30,27 @@ li{
   list-style-type: none;
   border: solid 1px black;
   background-color: #C8CACA;
-  
+  font-size: 0.5em;
 }
+
 li a {
   text-decoration: none ;
   color: #000;
-  
+}
+
+footer {
+  background-color: #24345C;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.1rem;
+}
+
+p, a {
+  text-decoration: none ;
+  color: #F8F7F5;
 }
