@@ -1,4 +1,10 @@
 
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem;
+  justify-content: flex-start;
+}
 
 .card-desc-container {
   background-color: #f8f7f5;
@@ -7,7 +13,6 @@
 }
 
 .card-img-container img {
-  display: flex;
   max-width: 250px;
 }
 
