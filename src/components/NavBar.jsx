@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 const NavBar = ({ departments }) => (
-  <div>
+  <>
     <header>
       <NavLink to="/">The Confined Traveller</NavLink>
     </header>
@@ -13,15 +13,22 @@ const NavBar = ({ departments }) => (
         {departments.map((department) => (
           <li>
             <NavLink
-              to={`/departments/${department.departmentId}`}
+              to={`/departments/${department.departmentId}/flower`}
             >
               { department.displayName }
             </NavLink>
           </li>
         ))}
+        <li>
+          <NavLink
+            to="/departments/11/sunset"
+          >
+            Sunset
+          </NavLink>
+        </li>
       </ul>
     </nav>
-  </div>
+  </>
 );
 
 

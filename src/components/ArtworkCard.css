@@ -1,6 +1,6 @@
 
 .card-container {
-  display: flex;
+  display: inline-flex;
   flex-flow: row wrap;
   padding: 1rem;
   justify-content: flex-start;

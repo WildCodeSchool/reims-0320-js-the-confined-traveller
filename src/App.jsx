@@ -27,26 +27,19 @@ function App() {
 
   return (
     <div className="app">
-      <div>
-        <Router>
-          <div>
-            <Switch>
-              <Route exact path="/">
-                <NavBar departments={departments} />
-              </Route>
-              <Route path="/departments/:id">
-                <header>
-                  <Link to="/">The Confined Traveller</Link>
-                </header>
-                <ArtworkList />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-      </div>
-      <p>
-        <ArtworkCard />
-      </p>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <NavBar departments={departments} />
+          </Route>
+          <Route path="/departments/:id/:keyword?">
+            <header>
+              <Link to="/">The Confined Traveller</Link>
+            </header>
+            <ArtworkList />
+          </Route>
+        </Switch>
+      </Router>
       <footer>
         <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">Wild Code School</a>
         <p>Hackathon project</p>
