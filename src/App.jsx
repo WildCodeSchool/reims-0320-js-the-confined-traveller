@@ -27,7 +27,6 @@ function App() {
 
   return (
     <div className="app">
-      <header>The Confined Traveller</header>
       <div>
         <Router>
           <div>
@@ -36,7 +35,9 @@ function App() {
                 <NavBar departments={departments} />
               </Route>
               <Route path="/departments/:id">
-                <Link to="/">Home</Link>
+                <header>
+                  <Link to="/">The Confined Traveller</Link>
+                </header>
                 <ArtworkList />
               </Route>
             </Switch>
