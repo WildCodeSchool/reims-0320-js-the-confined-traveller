@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   position: relative;
   margin: 0 auto;
+  background-color: #C8CACA;
 }
 
 header {
@@ -27,24 +28,35 @@ header {
   flex: 1;
 }
 
+.title {
+  color: #24345C;
+}
+
 ul {
   display: grid;
-  grid-template-columns:repeat(7 , 1fr);
+  grid-template-columns:repeat(4 , 1fr);
   overflow-y: hidden;
 }
 
 li {
   padding: 1rem;
   list-style-type: none;
-  border: solid 1px black;
-  background-color: #F8F7F5;
-  font-size: 0.5em;
+  border: solid 2px #24345C;
+  background-color: white;
+  font-size: 1em;
   margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin : 1rem 1rem;
 }
 
 li a {
   text-decoration: none ;
-  color: #000;
+  color: #24345C;
+  font-weight: bold;
 }
 
 footer {
