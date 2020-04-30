@@ -34,9 +34,9 @@ footer {
   height: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding-left: 2rem;
+  padding: 1rem;
   font-family: 'Bangers', cursive;
   letter-spacing: 0.1rem;
 }
